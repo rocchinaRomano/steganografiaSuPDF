@@ -1,5 +1,5 @@
 *************************************************************
-*					STEGANOGRAFIA SU PDF					*
+*                  STEGANOGRAFIA SU PDF		            *
 *************************************************************
 
 La seguente app consente di effettuare l'inserimento/estrazione di un messaggio
