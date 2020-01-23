@@ -8,6 +8,10 @@ in/da un file PDF.
 Per eseguire, è necessario
 - scaricare l'intero contenuto della cartella "steganografiaSuPdf2";
 - una volta scaricato, basterà fare un doppio click sul file "steganografiaSuPdf.bat".
+- a questo punto si aprirà una finestra e basterà cliccare su "file" per
+decidere se effettuare l'embedding oppure l'estrazione di informazione
+steganografica su/da un file pdf.
+
 
 NOTA: il file del codice sorgente, invece, nella cartella "steganografiaSuPdf\src".
 
