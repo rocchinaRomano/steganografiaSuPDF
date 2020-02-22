@@ -10,10 +10,11 @@ package steganografiasupdf;
  * @author Rocchina
  */
 public class Costanti {
-    //contiene le chiavi per la mappa
-    public final static String messaggioInserito = "messaggioInserito";
-    public final static String pdfcover = "coverPdf";
-    public final static String pdfStego = "stegoPdf";
-    
-    
+    //contiene le chiavi per la mappa degli OGGETI SALVATI:
+ 
+    public final static String messaggioInserito = "messInserito";
+    public final static String passwordEmbedding = "passwordEmbedding";
+    public final static String coverPdf = "coverPdf";
+    public final static String stegoPdf = "coverPdf";
+    public final static String listaSottoseq = "listaSottoseq";
 }

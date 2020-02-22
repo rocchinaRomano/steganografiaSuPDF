@@ -1,3 +1,3 @@
 cd steganografiasupdf
 cd dist
-java -jar steganografiaSuPdf.jar
+java -jar steganografiaSuPDF.jar

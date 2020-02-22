@@ -7,69 +7,81 @@ package steganografiasupdf;
 
 import java.util.HashMap;
 import java.util.Map;
-import steganografiasupdf.embedding.ApriEmbedding;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import steganografiasupdf.embedding.AggiungiSchermataEmbedding;
+import steganografiasupdf.embedding.EsploraRisorseEmbedding;
 import steganografiasupdf.embedding.InserisciMessaggio;
-import steganografiasupdf.embedding.MostraPannelloEmbedding;
-import steganografiasupdf.embedding.Ok;
-import steganografiasupdf.estrazione.ApriEstrazione;
-import steganografiasupdf.estrazione.EstraiMessaggio;
-import steganografiasupdf.estrazione.MostraPannelloEstrazione;
+import steganografiasupdf.embedding.LeggiMessaggio;
+import steganografiasupdf.embedding.LeggiPasswordEmbedding;
+import steganografiasupdf.extraction.AggiungiSchermataEstrazione;
+import steganografiasupdf.extraction.EsploraRisorseEstrazione;
+import steganografiasupdf.extraction.EstraiMessaggio;
 
 /**
  *
  * @author Rocchina
  */
-public class SteganografiaSuPdf {
+public class SteganografiaSuPDF {
 
-    private final FramePrincipale frame;
-    private Esci esci;
-    private Info info;
-    private MostraPannelloEmbedding mostra;
-    private Ok ok;
-    private ApriEmbedding apri;
-    private InserisciMessaggio inserisci;
-    private MostraPannelloEstrazione mostraEstrazione;
-    private ApriEstrazione apriEstrazione;
-    private EstraiMessaggio estraiMess;
-    private final Map<String, Object> mappa = new HashMap<>();
-    
-    public SteganografiaSuPdf(){
-        inizializzaAzioni();
-        this.frame = new FramePrincipale(this);
-    };
-    
-    
     /**
      * @param args the command line arguments
      */
+    
+    private final SchermataPrincipale sp;
+    
+    private final Log logger = LogFactory.getLog(SteganografiaSuPDF.class);
+    
+    //mappa oggetti:
+    private final Map<String, Object> mappaObject = new HashMap<>();
+    
+    //Azioni:
+    private Esci esci;
+    private Info info;
+    private AggiungiSchermataEmbedding se;
+    private LeggiMessaggio lm;
+    private LeggiPasswordEmbedding lpe;
+    private EsploraRisorseEmbedding eRembedding;
+    private InserisciMessaggio im;
+    private AggiungiSchermataEstrazione sEstrazione;
+    private EsploraRisorseEstrazione eRestrazione;
+    private EstraiMessaggio eMessaggio;
+    
+    public SteganografiaSuPDF(){
+        inizializzaAzioni();
+        this.sp = new SchermataPrincipale(this);
+    }
+    
     public static void main(String[] args) {
-        //richiamare l'evento per aprire la finestra principale:
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             @Override
             public void run() {
-                SteganografiaSuPdf steganografia = new SteganografiaSuPdf();
+                SteganografiaSuPDF steganografia = new SteganografiaSuPDF();
             }
         });
     }
 
     private void inizializzaAzioni() {
+        logger.info("In inizializzaAzioni()");
         this.esci = new Esci(this);
         this.info = new Info(this);
-        this.mostra = new MostraPannelloEmbedding(this);
-        this.ok = new Ok(this);
-        this.apri = new ApriEmbedding(this);
-        this.inserisci = new InserisciMessaggio(this);
-        this.mostraEstrazione = new MostraPannelloEstrazione(this);
-        this.apriEstrazione = new ApriEstrazione(this);
-        this.estraiMess = new EstraiMessaggio(this);
+        this.se = new AggiungiSchermataEmbedding(this);
+        this.lm = new LeggiMessaggio(this);
+        this.lpe = new LeggiPasswordEmbedding(this);
+        this.eRembedding = new EsploraRisorseEmbedding(this);
+        this.im = new InserisciMessaggio(this);
+        this.sEstrazione = new AggiungiSchermataEstrazione(this);
+        this.eRestrazione = new EsploraRisorseEstrazione(this);
+        this.eMessaggio = new EstraiMessaggio(this);
     }
-
-    /**
-     * @return the frame
-     */
-    public FramePrincipale getFrame() {
-        return frame;
+    
+    public void addObject(String key, Object obj){
+        this.mappaObject.put(key, obj);
+    }
+    
+    public Object getObject(String key){
+        return this.mappaObject.get(key);
     }
 
     /**
@@ -80,6 +92,13 @@ public class SteganografiaSuPdf {
     }
 
     /**
+     * @return the sp
+     */
+    public SchermataPrincipale getSp() {
+        return sp;
+    }
+
+    /**
      * @return the info
      */
     public Info getInfo() {
@@ -87,63 +106,62 @@ public class SteganografiaSuPdf {
     }
 
     /**
-     * @return the mostra
+     * @return the se
      */
-    public MostraPannelloEmbedding getMostra() {
-        return mostra;
+    public AggiungiSchermataEmbedding getSe() {
+        return se;
     }
 
     /**
-     * @return the ok
+     * @return the lm
      */
-    public Ok getOk() {
-        return ok;
+    public LeggiMessaggio getLm() {
+        return lm;
     }
 
     /**
-     * @return the apri
+     * @return the lpe
      */
-    public ApriEmbedding getApriEmbedding() {
-        return apri;
+    public LeggiPasswordEmbedding getLpe() {
+        return lpe;
     }
 
     /**
-     * @return the inserisci
+     * @return the eRembedding
      */
-    public InserisciMessaggio getInserisci() {
-        return inserisci;
-    }
-    
-    public Object getObject(String chiave){
-        return mappa.get(chiave);
-    }
-    
-    public void addObject(String chiave, Object obj){
-        mappa.put(chiave, obj);
-    }
-    
-    public int getSize(){
-        return mappa.size();
+    public EsploraRisorseEmbedding geteRembedding() {
+        return eRembedding;
     }
 
     /**
-     * @return the mostraEstrazione
+     * @return the im
      */
-    public MostraPannelloEstrazione getMostraEstrazione() {
-        return mostraEstrazione;
+    public InserisciMessaggio getIm() {
+        return im;
     }
 
     /**
-     * @return the apriEstrazione
+     * @return the sEstrazione
      */
-    public ApriEstrazione getApriEstrazione() {
-        return apriEstrazione;
+    public AggiungiSchermataEstrazione getsEstrazione() {
+        return sEstrazione;
     }
 
     /**
-     * @return the estraiMess
+     * @return the eRestrazione
      */
-    public EstraiMessaggio getEstraiMess() {
-        return estraiMess;
+    public EsploraRisorseEstrazione geteRestrazione() {
+        return eRestrazione;
+    }
+
+    /**
+     * @return the eMessaggio
+     */
+    public EstraiMessaggio geteMessaggio() {
+        return eMessaggio;
+    }
+
+    public void removeObject(String key) {
+        this.mappaObject.remove(key);
     }
 }
