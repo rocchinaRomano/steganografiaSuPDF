@@ -1,7 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *  Steganografia su PDF is a software developed for embedding and extracting 
+ *  a secret message within PDF files.
+ *  This software is property of Rocchina Romano.
+ *  mail: rocchina.romano@yahoo.it
+ *
+ *	Copyright Rocchina Romano 2020
+ *
+ *  class SteganografiaSuPDF (main class)
  */
 package steganografiasupdf;
 

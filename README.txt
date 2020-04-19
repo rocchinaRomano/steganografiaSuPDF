@@ -1,22 +1,55 @@
 *************************************************************
-*                  STEGANOGRAFIA SU PDF		            *
+*                 STEGANOGRAPHY ON PDF FILES	            *
 *************************************************************
 
-La seguente app consente di effettuare l'inserimento/estrazione di un messaggio
-in/da un file PDF.
+"Steganografia su PDF" is a software developed for embedding 
+and extracting a secret message within PDF files.
 
-Per eseguire, è necessario
-- scaricare l'intero contenuto della cartella "steganografiaSuPdf2";
-- una volta scaricato, basterà fare un doppio click sul file "steganografiaSuPdf.bat".
-- oppure fare click sul file "steganografiaSuPDF.jar" che si trova nella cartella
-	"steganografiaSuPDF\dist"
+To run software:
+
+- download all the contents of repository "steganografiaSuPDF"
+  ("Clone or download", "Download ZIP") ;
+- after download, double click on file "steganografiaSuPdf.bat"
+- otherwise, double click on file "steganografiaSuPDF.jar" 
+	in folder "steganografiaSuPDF\dist"
+
+NOTE: 
+	  -> Source code is in folder "steganografiaSuPDF\src".
+	  -> After the embedding process, the stego PDF's path is shown 
+		to dialog window.
+	  -> For reading, writing and editing PDF files, the "iText" 
+		library for Java was used.
+
+____________________________________________________________________
+Italian version
+
+*************************************************************
+*                  STEGANOGRAFIA SU PDF		            	*
+*************************************************************
+
+L'app "Steganografia su PDF" consente di effettuare 
+l'inserimento e l'estrazione di un messaggio segreto
+a partire da un file PDF.
+
+Per eseguire:
+
+- scaricare l'intero contenuto della repository 
+  "steganografiaSuPDF" 
+  (-> "Clone or download", "Download ZIP");
+- una volta scaricato, basterà fare un doppio click sul 
+  file "steganografiaSuPdf.bat".
+- oppure fare click sul file "steganografiaSuPDF.jar" 
+  che si trova nella cartella "steganografiaSuPDF\dist"
 
 
-NOTA: il file del codice sorgente, invece, nella cartella "steganografiaSuPDF\src".
+NOTA: 
+	
+	-> il codice sorgente si trova nella cartella
+		"steganografiaSuPDF\src".
 
-	  alla fine della procedura di embedding, verrà mostrato in una finestra
-	  il percorso in cui è stato salvato lo stegoPdf
+	-> alla fine del processo di embedding, verrà 
+	   mostrato in una finestra il percorso in cui è stato 
+	   salvato lo stegoPdf
 	  
-	  Per la lettura/scrittura da/su file PDF è stata utilizzata la liberia "iText".
-		
-	  Per il sistema di logging è stato utilizzato "commons-logging-1.1.1"
+	-> Per la lettura, la scrittura e la modifica di file PDF 
+	   è stata utilizzata la libreria "iText" per Java.
