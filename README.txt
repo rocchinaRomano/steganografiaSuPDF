@@ -10,7 +10,7 @@ To run software:
 - download all the contents of "steganografiaSuPDF" 
   repository ("Clone or download", "Download ZIP");
 - after download, double click on "steganografiaSuPdf.bat" file; 
-- otherwise, double click on file "steganografiaSuPDF.jar" 
+- otherwise, double click on "steganografiaSuPDF.jar" file
 	in "steganografiaSuPDF\dist" folder.
 
 NOTE: 
