@@ -7,14 +7,14 @@ and extracting a secret message within PDF files.
 
 To run software:
 
-- download all the contents of repository "steganografiaSuPDF"
-  ("Clone or download", "Download ZIP") ;
-- after download, double click on file "steganografiaSuPdf.bat"
+- download all the contents of "steganografiaSuPDF" 
+  repository ("Clone or download", "Download ZIP");
+- after download, double click on "steganografiaSuPdf.bat" file; 
 - otherwise, double click on file "steganografiaSuPDF.jar" 
-	in folder "steganografiaSuPDF\dist"
+	in "steganografiaSuPDF\dist" folder.
 
 NOTE: 
-	  -> Source code is in folder "steganografiaSuPDF\src".
+	  -> Source code is in "steganografiaSuPDF\src" folder.
 	  -> After the embedding process, the stego PDF's path is shown 
 		to dialog window.
 	  -> For reading, writing and editing PDF files, the "iText" 
@@ -24,7 +24,7 @@ ____________________________________________________________________
 Italian version
 
 *************************************************************
-*                  STEGANOGRAFIA SU PDF		            	*
+*                  STEGANOGRAFIA SU PDF		            *
 *************************************************************
 
 L'app "Steganografia su PDF" consente di effettuare 
