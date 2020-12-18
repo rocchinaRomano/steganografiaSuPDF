@@ -8,7 +8,7 @@ and extracting a secret message within PDF files.
 To run software:
 
 - download all the contents of "steganografiaSuPDF" 
-  repository ("Clone or download", "Download ZIP");
+  repository ("Code", "Download ZIP");
 - after download, double click on "steganografiaSuPdf.bat" file; 
 - otherwise, double click on "steganografiaSuPDF.jar" file
 	in "steganografiaSuPDF\dist" folder.
@@ -35,7 +35,7 @@ Per eseguire:
 
 - scaricare l'intero contenuto della repository 
   "steganografiaSuPDF" 
-  (-> "Clone or download", "Download ZIP");
+  (-> "Code", "Download ZIP");
 - una volta scaricato, basterà fare un doppio click sul 
   file "steganografiaSuPdf.bat".
 - oppure fare click sul file "steganografiaSuPDF.jar" 
