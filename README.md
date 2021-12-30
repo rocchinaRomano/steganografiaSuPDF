@@ -1,4 +1,6 @@
-## **STEGANOGRAPHY ON PDF FILES**
+## *English Version*
+
+# **STEGANOGRAPHY ON PDF FILES**
 
 "**Steganografia su PDF**" is a software developed for embedding 
 and extracting a secret message within PDF files.
@@ -20,7 +22,7 @@ To run software:
 
 ## *Italian version*
 
-## **STEGANOGRAFIA SU PDF**
+# **STEGANOGRAFIA SU PDF**
 
 L'app "**Steganografia su PDF**" consente di effettuare 
 l'inserimento e l'estrazione di un messaggio segreto
